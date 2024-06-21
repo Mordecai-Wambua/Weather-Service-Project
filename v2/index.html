@@ -8,6 +8,8 @@
     <title>Dashboard</title>
     <link rel="stylesheet" href="styles/common.css">
     <link rel="stylesheet" href="styles/navigation.css">
+    <link rel="stylesheet" href="styles/weather.css">
+    <link rel="stylesheet" href="styles/accessibility.css">
 </head>
 
 
@@ -31,7 +33,7 @@
                     </a>
                 </li>
 
-            
+
                 <li>
                     <a href="#">
                         <span class="icon">
@@ -66,12 +68,76 @@
                     </label>
                 </div>
 
-                <div class="API">
+                <div class="api">
                     <img src="images/openweather.png" alt="">
                 </div>
             </div>
-        </div>
 
+            <div class="dash">
+                <div class="components">
+                    <div class="weather">
+                        <p>
+                            Current Weather
+                            <br>
+                            Time
+                        </p>
+                        <br>
+                        <div class="icon">
+                            <ion-icon name="cloud-outline"></ion-icon>
+                        </div>
+                        
+                        <div class="location">
+                            <span class="icon">
+                                <ion-icon name="pin-outline"></ion-icon>
+                            </span>
+                            <span class="city">City</span>
+                        </div>
+
+                        <div class="temperature">
+                            <span class="icon">
+                                <ion-icon name="thermometer-outline"></ion-icon>
+                            </span>
+                            <span class="degree">0</span>
+                            <span class="unit">°C</span>
+                        </div>
+
+                        <div class="status">
+                            <span class="icon">
+                                <ion-icon name="cloud-outline"></ion-icon>
+                            </span>
+                            <span class="condition">Condition</span>
+                        </div>
+                    </div>
+
+                    <div class="details">
+                        <div class="card">
+                            <div class="title">Humidity</div>
+                            <div class="value">0%</div>
+                        </div>
+
+                        <div class="card">
+                            <div class="title">Wind</div>
+                            <div class="value">0 m/s</div>
+                        </div>
+
+                        <div class="card">
+                            <div class="title">Pressure</div>
+                            <div class="value">0 hPa</div>
+                        </div>
+
+                        <div class="card">
+                            <div class="title">Visibility</div>
+                            <div class="value">0km</div>
+                        </div>
+
+                        <div class="card">
+                            <div class="title">Air quality</div>
+                            <div class="value">0 </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- Scripts -->
