@@ -3,7 +3,7 @@ import requests
 
 app = Flask(__name__)
 
-API_KEY = '0644a5f97d708b240fd0ee2ee3bbae27'
+API_KEY = 'api'
 DEFAULT_CITY = 'Nairobi'
 
 @app.route('/')
