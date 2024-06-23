@@ -1,0 +1,117 @@
+.dash{
+    position: relative;
+    width: 100%;
+    min-height: 400px;
+    align-items: center; 
+    padding: 20px;
+    display: flex;
+}
+
+.dash .components{
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 2 1fr;
+    padding: 30px;
+    background: var(--white);
+    box-shadow: 0 7px 35px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+}
+
+.dash .components p{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 2.3rem;
+    text-align: center;
+    color: var(--blue);
+    border-bottom: 1px solid var(--black2);
+    padding-bottom: 10px;
+}
+
+.dash .components .country{
+    position: relative;
+    font-size: 2.0rem;
+    color: var(--black2);
+    margin-left: 10px;
+}
+
+.dash .components .weather{
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+    border-bottom: 1px solid var(--black2);
+}
+
+
+.dash .components .weather .status .condition{
+    position: relative;
+    display: inline;
+    font-size: 1.5rem;
+    color: var(--black2);
+}
+
+
+.dash .components .weather .temperature{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dash .components .weather .temperature .icon{
+    position: relative;
+    display: inline;
+    min-width: 60px;
+    height: 60px;
+    font-size: 3.0rem;
+    line-height: 75px;
+    text-align: left;
+}
+
+.dash .components .weather .temperature .value{
+    position: relative;
+    display: inline;
+    font-size: 2.5rem;
+    color: var(--black2);
+    margin-left: 10px;
+}
+
+.dash .components .details{
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: grid;    
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 20px;
+    border-bottom: 1px solid var(--gray);
+}
+
+.dash .components .details .card{
+    position: relative;
+    background: var(--white);
+    padding: 30px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+}
+
+.card .title{
+    position: relative;
+    font-weight: 500;
+    font-size: 1.5rem;
+    color: var(--blue);
+}
+
+.card .value{
+    color: var(--black2);
+    font-size: 1.1rem;
+    margin-top: 5px;
+}
