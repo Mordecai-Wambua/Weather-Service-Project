@@ -1,9 +1,10 @@
 from flask import Flask, render_template, request
 import requests
+from sys import argv
 
 app = Flask(__name__)
 
-API_KEY = 'api'
+API_KEY = argv[1]
 DEFAULT_CITY = 'Nairobi'
 
 @app.route('/')
