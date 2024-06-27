@@ -5,12 +5,13 @@
     height: 100%;
     background: var(--blue);
     border-left: 10px solid var(--blue);
-    transition: 0.5s;
+    transition: 1s;
     overflow: hidden;
 }
 
 .navigation.active{
     width: 80px;  
+    transition: 1s;
 }
 .navigation ul{
     position: absolute;
@@ -113,12 +114,13 @@
     left: 300px;
     min-height: 100vh;
     background: var(--white);
-    transition: 0.5s;
+    transition: 1s;
 }
 
 .main.active{
     width: calc(100% - 80px);
     left: 80px;
+    transition: 1s;
 }
 
 .topbar{
@@ -159,6 +161,7 @@
     padding: 5px 20px;
     padding-left: 35px;
     font-size: 18px;
+    color: var(--blue);
     outline: none;
     border: 1px solid var(--black2);
     text-align: center;

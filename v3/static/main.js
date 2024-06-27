@@ -1,18 +1,31 @@
 document.addEventListener('DOMContentLoaded', () => {
+    showContent('weather-content');
 
     document.getElementById('dashboard-link').addEventListener('click', function (event) {
         event.preventDefault();
         showContent('weather-content');
+        if (window.innerWidth <= 990) {
+            navigation.classList.toggle('active');
+            main.classList.toggle('active');
+        }
     });
 
     document.getElementById('support-link').addEventListener('click', function (event) {
         event.preventDefault();
         showContent('support-content');
+        if (window.innerWidth <= 990) {
+            navigation.classList.toggle('active');
+            main.classList.toggle('active');
+        }
     });
 
     document.getElementById('about-link').addEventListener('click', function (event) {
         event.preventDefault();
         showContent('about-content');
+        if (window.innerWidth <= 990) {
+            navigation.classList.toggle('active');
+            main.classList.toggle('active');
+        }
     });
 
     function showContent(contentId) {

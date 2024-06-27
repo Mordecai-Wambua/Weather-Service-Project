@@ -4,7 +4,7 @@
     min-height: 400px;
     align-items: center; 
     padding: 20px;
-    display: flex;
+    display: block;
 }
 
 .dash .components{
