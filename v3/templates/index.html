@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/navigation.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/weather.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/accessibility.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/form.css') }}">
 
     <!-- Scripts -->
     <script src="{{ url_for('static', filename='main.js') }}"></script>
@@ -133,8 +134,34 @@
             </div>
 
             <div class="dash" id="support-content" style="display: none;">
-                <!-- Support content here -->
-                <p>Support Content</p>
+                <div class="hero">
+                    <form autocomplete="on">
+                        <div class="row">
+                             <div class="input-group">
+                             <input type="text" id="name" required>
+                             <label for="name">Your Name</label>
+                            </div>
+                            <div class="input-group">
+                             <input type="text" id="number" required>
+                             <label for="number">Phone Number</label>
+                            </div>
+                        </div>
+                       
+                        <div class="input-group">
+                            <input type="email" id="email" required>
+                            <label for="email">Email Address</label>
+                        </div>
+                        <div class="input-group">
+                            <textarea id="message" rows="10" required></textarea>
+                            <label for="name">Your message</label>
+                        </div>
+                        
+                        <div class="button-group">
+                            <button type="submit">SUBMIT</button>
+                            <button type="reset">RESET</button>
+                        </div>
+                    </form>
+                </div>
             </div>
 
             <div class="dash" id="about-content" style="display: none;">
