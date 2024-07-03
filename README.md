@@ -12,8 +12,6 @@
 - [API Endpoints](#api-endpoints)
 - [Project Structure](#project-structure)
 - [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Introduction
 
@@ -45,7 +43,39 @@ The Weather Dashboard Application is a web-based tool that provides users with c
 ### Installation
 
 1. **Clone the repository:**
+
    ```bash
-   git clone https://github.com/yourusername/weather-dashboard.git
-   cd weather-dashboard
+   git clone https://github.com/Mordecai-Wambua/Weather-Service-Project.git
+   cd Weather-Service-Project
    ```
+
+2. **Install dependencies:**
+   ```bash
+   pip install flask requests
+   ```
+
+### Running the Application
+
+1. **Run the Flask application:**
+
+   ```bash
+   python3 app.py your_openweather_api_key
+   ```
+
+2. **Open your web browser and navigate to http://127.0.0.1:5000/.**
+
+### API Endpoints
+
+- GET /: Renders the main dashboard with weather data for the default or queried city.
+- POST /submit_form: Handles form submissions and saves the data to a JSON file.
+
+### Usage
+
+- Dashboard: Displays current weather, forecast, and air quality information for the selected city.
+- Support Form: Users can fill out and submit a support request form. The data is stored in form_data.json.
+- Weather Forecast Display
+  The weather forecast is displayed in a 5-column layout, showing the date, temperature, condition, and an icon for each day.
+
+### Form Submission
+
+Upon submitting the form, the user is redirected to the dashboard, and the form data is saved to a JSON file on the server.
