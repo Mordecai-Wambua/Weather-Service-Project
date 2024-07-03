@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/weather.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/accessibility.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/form.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/about.css') }}">
 
     <!-- Scripts -->
     <script src="{{ url_for('static', filename='main.js') }}"></script>
@@ -79,6 +80,7 @@
             </div>
 
             <div class="dash" id="weather-content">
+                <div class="box">
                 <div class="components">
                     <p>
                         Weather in {{ weather_data['city'] }} <span class="country">{{ weather_data['country'] }}</span>
@@ -93,14 +95,7 @@
                             <div class="condition">{{ weather_data['condition'] }}</div>
                         </div>
 
-                        <div class="sun">
-                            <div class="sunrise">
-                                Sunrise 6:35AM
-                            </div>
-                            <div class="sunset">
-                                Sunset 6:35PM
-                            </div>
-                        </div>
+                        
 
                         <div class="temperature">
                             <span class="icon">
@@ -140,6 +135,23 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="forecast">
+                    <div class="title">5-Day Weather Forecast</div>
+                    <div class="forecast-cards">
+                        {% for day in weather_data['forecast'] %}
+                        <div class="forecast-card">
+                            <div class="forecast-date">{{ day['date'] }}</div>
+                            <div class="forecast-icon">
+                                <img src="http://openweathermap.org/img/wn/{{ day['icon'] }}@2x.png" alt="forecast icon">
+                            </div>
+                            <div class="forecast-temp">{{ day['temperature'] }}°C</div>
+                            <div class="forecast-condition">{{ day['condition'] }}</div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
             </div>
 
             <div class="dash" id="support-content">
@@ -174,8 +186,34 @@
             </div>
 
             <div class="dash" id="about-content">
-                <!-- About content here -->
-                <p>About Content</p>
+                <div class="about-container">
+                    <div class="about-contents">
+                    <h2>About Our Weather Service</h2>
+                    <p>
+                        Welcome to our Weather Service! Our mission is to provide accurate and up-to-date weather information to help you plan your day, stay safe, and make informed decisions.<br> Whether you're checking the weather for your daily commute, planning a weekend getaway, or preparing for severe weather conditions, we've got you covered.
+                    </p>
+                    <h3>Our Vision</h3>
+                    <p>
+                        We aim to be the most reliable and trusted source for weather information worldwide. By leveraging advanced technology and collaborating with leading meteorological organizations, we strive to deliver precise weather forecasts and alerts tailored to your specific location.
+                    </p>
+                    <h3>Our Services</h3>
+                    <ul>
+                        <li><strong>Current Weather:</strong> Get real-time updates on temperature, humidity, wind speed, and more.</li>
+                        <li><strong>5-Day Forecast:</strong> Plan ahead with our detailed 5-day weather forecasts.</li>
+                    </ul>
+                    <h3>Our Technology</h3>
+                    <p>
+                        Our platform uses data from reliable sources such as the OpenWeatherMap API to provide you with the most accurate weather information. Our team of experts continually works to improve our algorithms and data processing methods to ensure you receive the best service possible.
+                    </p>
+                    <h3>Contact Us</h3>
+                    <p>
+                        We value your feedback and are here to help with any questions or concerns. Feel free to reach out to our support team through the Support section. We're committed to providing you with excellent customer service and support.
+                    </p>
+                    <p class="thanks">
+                        Thank you for choosing our Weather Service. We're honored to be your go-to source for all your weather needs.
+                    </p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

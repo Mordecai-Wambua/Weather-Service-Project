@@ -30,7 +30,8 @@ def get_weather_data(city):
             'icon': data['weather'][0]['icon'],
             'city': data['name'],
             'country': data['sys']['country'],
-            'aqi': get_air_quality_data(lat, lon)
+            'aqi': get_air_quality_data(lat, lon),
+            'forecast': get_forecast_data(lat, lon)
         }
     else:
         weather = None
@@ -45,6 +46,23 @@ def get_air_quality_data(lat, lon):
         return aqi
     else:
         return None
+
+def get_forecast_data(lat, lon):
+    url = f'http://api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={API_KEY}&units=metric'
+    response = requests.get(url)
+    data = response.json()
+    forecast = []
+    if response.status_code == 200:
+        for i in range(0, len(data['list']), 8):  # OpenWeatherMap provides data every 3 hours, so 8 periods per day
+            day_data = data['list'][i]
+            forecast.append({
+                'date': day_data['dt_txt'].split(' ')[0],
+                'temperature': day_data['main']['temp'],
+                'condition': day_data['weather'][0]['description'],
+                'icon': day_data['weather'][0]['icon']
+            })
+    return forecast
+ 
 
 if __name__ == '__main__':
     app.run(debug=True)

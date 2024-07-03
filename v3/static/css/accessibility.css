@@ -3,6 +3,10 @@
     .dash .components .details{
         grid-template-columns: repeat(4, 1fr);
     }
+
+    .dash .forecast .forecast-cards{
+        grid-template-columns: repeat(4, 1fr);
+    }
     
 }
 
@@ -30,9 +34,17 @@
     .dash .components .details{
         grid-template-columns: repeat(3, 1fr);
     }
+
+    .dash .forecast .forecast-cards{
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 @media (max-width: 768px){
+    .dash .components p{
+        font-weight: 400;
+        font-size: 2.3rem;
+    }
     .dash .components .details{
         grid-template-columns: repeat(2, 1fr);
     }
@@ -40,10 +52,30 @@
     .details .card title{
         white-space: nowrap;
     }
+
+    .dash .forecast .title{
+        font-weight: 400;
+        font-size: 2.3rem;
+    }
+
+    .dash .forecast .forecast-cards{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    
 }
+/**
+@media (max-width: 670px){
+    .hero form .
+}
+    **/
 
 @media (max-width: 480px) {
     .dash .components .details{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .dash .forecast .forecast-cards{
         grid-template-columns: repeat(1, 1fr);
     }
 
