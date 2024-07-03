@@ -156,27 +156,25 @@
 
             <div class="dash" id="support-content">
                 <div class="hero">
-                    <form autocomplete="on">
+                    <form autocomplete="on" action="/submit_form" method="post">
                         <div class="row">
-                             <div class="input-group">
-                             <input type="text" id="name" required>
-                             <label for="name">Your Name</label>
+                            <div class="input-group">
+                                <input type="text" id="name" name="name" required>
+                                <label for="name">Your Name</label>
                             </div>
                             <div class="input-group">
-                             <input type="text" id="number" required>
-                             <label for="number">Phone Number</label>
+                                <input type="text" id="number" name="number" required>
+                                <label for="number">Phone Number</label>
                             </div>
                         </div>
-                       
                         <div class="input-group">
-                            <input type="email" id="email" required>
+                            <input type="email" id="email" name="email" required>
                             <label for="email">Email Address</label>
                         </div>
                         <div class="input-group">
-                            <textarea id="message" rows="10" required></textarea>
+                            <textarea id="message" name="message" rows="10" required></textarea>
                             <label for="name">Your message</label>
                         </div>
-                        
                         <div class="button-group">
                             <button type="submit">SUBMIT</button>
                             <button type="reset">RESET</button>
