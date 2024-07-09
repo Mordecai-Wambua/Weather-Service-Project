@@ -1,6 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
+    //Default view once website is loaded
     showContent('weather-content');
 
+    //Functions to enable the navigation to a particular section to work
+    //Dashboard function
     document.getElementById('dashboard-link').addEventListener('click', function (event) {
         event.preventDefault();
         showContent('weather-content');
@@ -10,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    //Support view function
     document.getElementById('support-link').addEventListener('click', function (event) {
         event.preventDefault();
         showContent('support-content');
@@ -19,6 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    //About page view function
     document.getElementById('about-link').addEventListener('click', function (event) {
         event.preventDefault();
         showContent('about-content');
